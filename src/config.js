@@ -1,5 +1,6 @@
 export default {
-    s3: {
+  MAX_ATTACHMENT_SIZE: 5000000, // 5 MB
+  s3: {
       REGION: "us-east-1",
       BUCKET: "serverless-stack-notesapp-uploads"
     },

@@ -24,7 +24,7 @@ Amplify.configure({
     API: {
       endpoints: [
         {
-          name: "notes",
+          name: "notes", // the name is used in the POST request by Amplify (API.post('notes', '/notes',...)). See Add Create Note - Call the Create API (NewNote.js - createNote())
           endpoint: config.apiGateway.URL,
           region: config.apiGateway.REGION
         },
