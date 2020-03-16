@@ -35,7 +35,8 @@ export default function Login(props) {
             await Auth.signIn(fields.email, fields.password);
             console.log('logged in!');
             props.userHasAuthenticated(true); // update state
-            props.history.push('/'); // using the router props history
+            console.log('props',props);
+            // props.history.push('/'); // using the router props history
         }catch(e){
             console.log(e.message);
             setIsLoading(false);
