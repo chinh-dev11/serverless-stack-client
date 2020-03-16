@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import { API } from 'aws-amplify';
-import { s3Upload } from '../libs/awslib';
+import { s3Upload } from '../libs/awsLib';
 import LoaderButton from "../components/LoaderButton";
 import config from "../config";
 import "./NewNote.css";
