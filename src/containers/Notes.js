@@ -15,7 +15,7 @@ export default function Notes(props) {
 
   useEffect(() => {
     function loadNote() {
-      return API.get("notes", `/notes/${props.match.params.id}`); // "note": name configured in API.endpoints.name at initialize AWS 
+      return API.get("notes", `/notes/${props.match.params.id}`); // "note": name configured in API.endpoints.name at initialize AWS (index.js)
     }
 
     async function onLoad() {

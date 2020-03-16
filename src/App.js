@@ -68,10 +68,17 @@ function App(props) {
           <Nav pullRight>
             {/**
               - The <> or Fragment component can be thought of as a placeholder component.
-              - By using the Fragment component it tells React that the two links are inside this component but we don’t want to render any extra HTML.
+              - By using the Fragment component (<>) it tells React that the two links are inside this component but we don’t want to render any extra HTML.
             */}
             { isAuthenticated 
-              ? <NavItem onClick={handleLogout}>Logout</NavItem>
+              ? (
+                <>
+                  <LinkContainer to="/settings">
+                    <NavItem>Settings</NavItem>
+                  </LinkContainer>
+                  <NavItem onClick={handleLogout}>Logout</NavItem>
+                </>
+              )
               : <>
                   <LinkContainer to="/signup">
                     <NavItem>Signup</NavItem>

@@ -1,4 +1,5 @@
 export default {
+  STRIPE_PUBLISHABLE_KEY: "pk_test_Gcqa0iX35MUoVud3ctRklG9900hDI9Hw8k",
   MAX_ATTACHMENT_SIZE: 5000000, // 5 MB
   s3: {
       REGION: "us-east-1",

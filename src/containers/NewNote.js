@@ -85,7 +85,7 @@ export default function NewNote(props) {
               noteIdString:	a9600800-6619-11ea-95cd-6f48ed04e5c8	
               userIdString:	us-east-1:1e53ffa8-46b9-4490-a870-2a9030ef8e33
      */
-    return API.post('notes', '/notes', { // 
+    return API.post('notes', '/notes', { // "note": name configured in API.endpoints.name at initialize AWS (index.js)
       body: note
     })
   }
