@@ -7,6 +7,7 @@ import Routes from './Routes';
 import './App.css';
 
 function App(props) {
+  console.log('REACT_APP_STAGE',process.env.REACT_APP_STAGE);
   /**
    * - Initialize the variable isAuthenticated to false
    * - Calling the userHasAuthenticated to update isAuthenticated variable
@@ -37,8 +38,8 @@ function App(props) {
       userHasAuthenticated(true);
     }
     catch(e) {
-      // console.log(e); // No current user
-      if (e !== 'No current user') {
+      console.log(e); // No current user | User does not exist (in case user was removed from Cognito User Pool but still set in Local Storage)
+      if (e != 'No current user' && e != 'User does not exist') {
         alert(e);
       }
     }

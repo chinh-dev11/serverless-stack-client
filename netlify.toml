@@ -1,0 +1,28 @@
+# Global settings [build] applied to the whole site.
+# “base” is directory to change to before starting build, and
+# “publish” is the directory to publish (relative to root of your repo).
+# “command” is your build command.
+[build]
+  base    = "" ## directory where Netlify will run our build commands. "": project root (empty) 
+  publish = "build" ## points to where our build is generated
+  command = "REACT_APP_STAGE=dev npm run build"
+
+# Production context: All deploys to the main repository branch will inherit these settings.
+[context.production] ## this is when we push to master
+  command = "REACT_APP_STAGE=prod npm run build"
+
+# Deploy Preview context: All Deploy Previews will inherit these settings.
+[context.deploy-preview] ## branch-preview is for pull requests
+  command = "REACT_APP_STAGE=dev npm run build"
+
+# Branch Deploy context: All deploys that are not in an active Deploy Preview will inherit these settings.
+[context.branch-deploy] ## branch-deploy is what we will be using when we push to any other non-production branch
+  command = "REACT_APP_STAGE=dev npm run build"
+
+## Handle HTTP Status Codes
+## Handle requests to any non-root paths of our app. Our frontend is a single-page app and the routing is handled on the client side. We need to tell Netlify to always redirect any request to our index.html and return the 200 status code for it.
+### Always redirect any request to our index.html and return the status code 200.
+[[redirects]]
+    from    = "/*"
+    to      = "/index.html"
+    status  = 200
