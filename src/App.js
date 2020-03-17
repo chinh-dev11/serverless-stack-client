@@ -49,8 +49,8 @@ function App(props) {
 
   async function handleLogout(){
     await Auth.signOut();
-    props.history.push('/login');
     userHasAuthenticated(false);
+    props.history.push('/login');
   }
 
   return (
