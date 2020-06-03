@@ -61,6 +61,7 @@ function BillingForm({ isLoading, onSubmit, ...props }) {
           onChange={handleFieldChange}
           placeholder="Number of notes to store"
         />
+        <p className="text-muted">Testing purposes: $4/note</p>
       </FormGroup>
       <hr />
       <FormGroup bsSize="large" controlId="name">
@@ -69,10 +70,19 @@ function BillingForm({ isLoading, onSubmit, ...props }) {
           type="text"
           value={fields.name}
           onChange={handleFieldChange}
-          placeholder="Name on the card"
+          placeholder="Testing purposes: Anyname"
+          // placeholder="Name on the card"
         />
       </FormGroup>
       <ControlLabel>Credit Card Info</ControlLabel>
+      {/* CardElement: credit card number form provided by Stripe React SDK
+            source: https://stripe.com/docs/testing
+              - Card number: 4242424242424242	(Visa)
+              - Expiration date: Any future date
+              - CVC: Any 3 digits
+              - ZIP: Any 5 digits
+              - 5555555555554444	Mastercard	Any 3 digits	Any future date
+       */}
       <CardElement
         className="card-field"
         onChange={e => setIsCardComplete(e.complete)}
@@ -80,6 +90,15 @@ function BillingForm({ isLoading, onSubmit, ...props }) {
           base: { fontSize: "18px", fontFamily: '"Open Sans", sans-serif' }
         }}
       />
+      <div className="text-muted">
+        <p>Testing purposes:</p>
+        <ul>
+          <li>Card number: 4242424242424242	(Visa) / 5555555555554444	(Mastercard)</li>
+          <li>Expiration date: Any future date</li>
+          <li>CVC: Any 3 digits</li>
+          <li>ZIP: Any 5 digits</li>
+        </ul>
+      </div>
       <LoaderButton
         block
         type="submit"

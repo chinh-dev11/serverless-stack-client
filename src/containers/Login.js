@@ -23,7 +23,9 @@ export default function Login(props) {
 
 
     function validateForm() {
-        return fields.email.length > 0 && fields.password.length > 0;
+        // return fields.email.length > 0 && fields.password.length > 0;
+        // bypass validation thus use test default credentials
+        return true;
     }
 
     async function handleSubmit(event){
@@ -32,10 +34,10 @@ export default function Login(props) {
         setIsLoading(true); // show loading anim
 
         try{
-            await Auth.signIn(fields.email, fields.password);
+            await Auth.signIn(fields.email || 'test@example.com', fields.password || 'Passw0rd!');
             console.log('logged in!');
             props.userHasAuthenticated(true); // update state
-            console.log('props',props);
+            // console.log('props',props);
             // props.history.push('/'); // using the router props history
         }catch(e){
             console.log(e.message);
@@ -52,6 +54,7 @@ export default function Login(props) {
                         autoFocus
                         type="email"
                         value={fields.email}
+                        placeholder="test@example.com"
                         // onChange={e => setEmail(e.target.value)}
                         onChange={handleFieldChange}
                     />
@@ -61,6 +64,7 @@ export default function Login(props) {
                     <FormControl
                         type="password"
                         value={fields.password}
+                        placeholder="Passw0rd!"
                         // onChange={e => setPassword(e.target.value)}
                         onChange={handleFieldChange}
                     />

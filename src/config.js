@@ -1,18 +1,19 @@
+// AWS account: chinh.le11
 const dev = {
   STRIPE_PUBLISHABLE_KEY: "pk_test_Gcqa0iX35MUoVud3ctRklG9900hDI9Hw8k", // "YOUR_STRIPE_DEV_PUBLIC_KEY"
   s3: {
     REGION: "us-east-1",
-    BUCKET: "notes-app-api-iac-dev-attachmentsbucket-tv8eegv37nwq" // "YOUR_DEV_S3_UPLOADS_BUCKET_NAME"
+    BUCKET: "notes-app-api-iac-dev-attachmentsbucket-910eb5xah3zn" // "YOUR_DEV_S3_UPLOADS_BUCKET_NAME"
   },
   apiGateway: {
     REGION: "us-east-1",
-    URL: "https://zlioazya9g.execute-api.us-east-1.amazonaws.com/dev" // "YOUR_DEV_API_GATEWAY_URL"
+    URL: "https://697x3jn56m.execute-api.us-east-1.amazonaws.com/dev" // "YOUR_DEV_API_GATEWAY_URL"
   },
   cognito: {
     REGION: "us-east-1",
-    USER_POOL_ID: "us-east-1_NSHftoVdC", // "YOUR_DEV_COGNITO_USER_POOL_ID",
-    APP_CLIENT_ID: "54irndve5pmdamcvl7008gqm6c", // "YOUR_DEV_COGNITO_APP_CLIENT_ID",
-    IDENTITY_POOL_ID: "us-east-1:b739a555-a8bd-49c6-9915-20632a65c64f" // "YOUR_DEV_IDENTITY_POOL_ID"
+    USER_POOL_ID: "us-east-1_kVqoYdLDM", // "YOUR_DEV_COGNITO_USER_POOL_ID",
+    APP_CLIENT_ID: "4ji82isdfblv1evfos9om8703d", // "YOUR_DEV_COGNITO_APP_CLIENT_ID",
+    IDENTITY_POOL_ID: "us-east-1:e443b78e-6689-49ca-abd3-aaaa544978fc" // "YOUR_DEV_IDENTITY_POOL_ID"
   }
 };
 
@@ -20,17 +21,17 @@ const prod = {
   STRIPE_KEY: "pk_test_Gcqa0iX35MUoVud3ctRklG9900hDI9Hw8k", // "YOUR_STRIPE_PROD_PUBLIC_KEY",
   s3: {
     REGION: "us-east-1",
-    BUCKET: "notes-app-api-iac-prod-attachmentsbucket-1hgl5e307mipj" //"YOUR_PROD_S3_UPLOADS_BUCKET_NAME"
+    BUCKET: "notes-app-api-iac-prod-attachmentsbucket-18nu4tww28gdj" //"YOUR_PROD_S3_UPLOADS_BUCKET_NAME"
   },
   apiGateway: {
     REGION: "us-east-1",
-    URL: "https://kpigmp15z0.execute-api.us-east-1.amazonaws.com/prod" // "YOUR_PROD_API_GATEWAY_URL"
+    URL: "https://6x9x0g8721.execute-api.us-east-1.amazonaws.com/prod" // "YOUR_PROD_API_GATEWAY_URL"
   },
   cognito: {
     REGION: "us-east-1",
-    USER_POOL_ID: "us-east-1_jjbM7vtMV", // "YOUR_PROD_COGNITO_USER_POOL_ID",
-    APP_CLIENT_ID: "7lcei036hhmj7lan3e3vni7ad7", // "YOUR_PROD_COGNITO_APP_CLIENT_ID",
-    IDENTITY_POOL_ID: "us-east-1:00d623d7-2616-41d0-9ea0-afd8de434d8c" // "YOUR_PROD_IDENTITY_POOL_ID"
+    USER_POOL_ID: "us-east-1_4gpHLypie", // "YOUR_PROD_COGNITO_USER_POOL_ID",
+    APP_CLIENT_ID: "4vnn44sms46dfvnmm2gb0l2k4g", // "YOUR_PROD_COGNITO_APP_CLIENT_ID",
+    IDENTITY_POOL_ID: "us-east-1:c8f96990-18bd-4d50-b544-b40b89ee327a" // "YOUR_PROD_IDENTITY_POOL_ID"
   }
 };
 
