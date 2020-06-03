@@ -7,7 +7,7 @@ import Routes from './Routes';
 import './App.css';
 
 function App(props) {
-  console.log('REACT_APP_STAGE',process.env.REACT_APP_STAGE);
+  // console.log('REACT_APP_STAGE',process.env.REACT_APP_STAGE);
   /**
    * - Initialize the variable isAuthenticated to false
    * - Calling the userHasAuthenticated to update isAuthenticated variable
@@ -29,7 +29,7 @@ function App(props) {
   }, []); // check the user’s authentication state when our app first loads - with empty list of variables []
   
   async function onLoad() {
-    console.log('onload');
+    // console.log('onload');
     try {
       await Auth.currentSession();
       // const currSession = await Auth.currentSession();

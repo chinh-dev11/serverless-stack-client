@@ -10,7 +10,7 @@ export default function Home(props) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    console.log('props.isAuthenticated',props.isAuthenticated);
+    // console.log('props.isAuthenticated',props.isAuthenticated);
     async function onLoad() {
       if (!props.isAuthenticated) {
         return;
