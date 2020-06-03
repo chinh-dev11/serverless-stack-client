@@ -61,6 +61,7 @@ function BillingForm({ isLoading, onSubmit, ...props }) {
           onChange={handleFieldChange}
           placeholder="Number of notes to store"
         />
+        <p className="text-muted">Testing purposes: $4/note</p>
       </FormGroup>
       <hr />
       <FormGroup bsSize="large" controlId="name">
